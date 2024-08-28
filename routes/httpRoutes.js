@@ -18,4 +18,9 @@ router.get('/sensordata', async (req, res) => {
     res.json(data);
 });
 
+router.get('/ping',async(req, res)=>{
+   const data = "This is to monitor the server Uptime !";
+   res.send(data);
+})
+
 export default router;
