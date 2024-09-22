@@ -1,5 +1,5 @@
 import { subscribe, onMessage, publish } from '../services/mqttService.js';
-import { updateFirestoreDocument } from '../services/firestoreService.js';
+import { updateFirestoreDocument,getFirestoreDocument } from '../services/firestoreService.js';
 import { autocontrol } from './deviceController.js';
 
 export const initializeMqtt = (io) => {
