@@ -7,7 +7,9 @@ export const initializeMqtt = (io) => {
         'Pumphouse/LWT/Status',
         'Pumphouse/Sensor',
         'Pumphouse/Status',
-        'Pumphouse/ManualSwitch/Pump_State'
+        'Pumphouse/ManualSwitch/Pump_State',
+        'Pumphouse/Sensor/OHT_Float',
+        'Pumphouse/Sensor/UGT_Float'
     ];
 
     topics.forEach(topic => subscribe(topic));
