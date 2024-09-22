@@ -41,7 +41,7 @@ export const initializeMqtt = (io) => {
                     OHT_Float:data,
                     UGT_Float:Data1.UGT_Float
                 });
-                await updateFirestoreDocument('sensordata', 'sensorname', { OHT_Float: sensorData.OHT_Float });
+                await updateFirestoreDocument('sensordata', 'sensorname', { OHT_Float: data });
                 await autocontrol(io);
                 break;
             case 'Pumphouse/Sensor/UGT_Float':
@@ -50,7 +50,7 @@ export const initializeMqtt = (io) => {
                     UGT_Float:data,
                     OHT_Float:Data2.OHT_Float
                 });
-                await updateFirestoreDocument('sensordata', 'sensorname', { UGT_Float: sensorData.UGT_Float });
+                await updateFirestoreDocument('sensordata', 'sensorname', { UGT_Float: data });
                 await autocontrol(io);
                 break;
             default:
